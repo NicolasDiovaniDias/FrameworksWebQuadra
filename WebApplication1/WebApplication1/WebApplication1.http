@@ -1,0 +1,26 @@
+@WebApplication1_HostAddress = http://localhost:5156
+
+GET {{WebApplication1_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+POST {{WebApplication1_HostAddress}}/api/quadras
+Content-Type: application/json
+{
+  "nome": "Quadra 1"  
+}
+###
+GET {{WebApplication1_HostAddress}}/api/quadras
+Content-Type: application/json
+###
+GET {{WebApplication1_HostAddress}}/api/reserva
+Content-Type: application/json
+
+###
+POST {{WebApplication1_HostAddress}}/api/reserva
+Content-Type: application/json
+{
+    "inicio": "2026-09-15T16:00:00",
+    "fim": "2026-09-15T17:00:00",
+    "quadraID": 2
+}
